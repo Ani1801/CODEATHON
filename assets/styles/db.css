@@ -1,0 +1,118 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background: linear-gradient(to right, #6C63FF, #4e44d0);
+  min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background: rgba(255, 255, 255, 0.2); /* Transparent navbar */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: fixed; /* Stick to the top */
+  width: 100%;
+  z-index: 10;
+  backdrop-filter: blur(10px); /* Optional: Adds a blur effect */
+}
+
+.logo h2 {
+  font-size: 1.8rem;
+  color: #fff; /* White text for contrast */
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu ul li {
+  display: inline;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #fff; /* White links for visibility */
+  font-size: 1rem;
+  padding: 10px 15px;
+  border-radius: 20px;
+  transition: background 0.3s ease-in-out;
+}
+
+.menu ul li a:hover {
+  background: rgba(255, 255, 255, 0.3); /* Light hover effect */
+}
+
+.sign-up {
+  background: #ff5c5c;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  transition: background 0.3s ease-in-out;
+}
+
+.sign-up:hover {
+  background: #e04444;
+}
+
+/* Hero Section */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px 50px; /* Increased top padding for navbar spacing */
+  color: #fff;
+}
+
+.content {
+  flex: 1;
+}
+
+.content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.content p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.get-started {
+  padding: 15px 30px;
+  font-size: 1rem;
+  background: #ff5c5c;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.get-started:hover {
+  background: #e04444;
+}
+
+.illustration {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.illustration img {
+  max-width: 540px;
+  height: 565px;
+}
