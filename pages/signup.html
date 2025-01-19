@@ -18,6 +18,7 @@
         <!-- Right Panel -->
         <div class="right-panel">
             <h2>Create Your Account</h2>
+            <!-- Update the form action to point to index.html -->
             <form id="signup-form" action="./db.html" method="get">
                 <div class="input-group">
                     <label for="name">Full Name</label>
@@ -35,7 +36,10 @@
                     <label for="confirm-password">Confirm Password</label>
                     <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
                 </div>
-                <button type="submit" class="proceed-btn">Sign Up</button>
+                <!-- Keep this button as part of the form -->
+                
+                <button onclick="window.location.href='./db.html';" class="proceed-btn">Sign up</button>
+
             </form>
             <p class="signup-text">Already have an account? <a href="../index.html">Log In</a></p>
         </div>
