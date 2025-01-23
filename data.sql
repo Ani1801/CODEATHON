@@ -50,3 +50,4 @@ SELECT * FROM Users;
 SELECT * FROM Packages;
 
 INSERT INTO Users (name, email, password) VALUES ('Alice', 'alice@example.com', 'password123');
+INSERT INTO Users (name, email, password) VALUES ('Aniruddha', 'yeole@', 'password12345');
