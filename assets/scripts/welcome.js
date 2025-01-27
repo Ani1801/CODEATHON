@@ -1,17 +1,15 @@
-// Example: welcome.js
-document.addEventListener("DOMContentLoaded", function() {
-    // Example of checking if the user is logged in
-    const user = JSON.parse(localStorage.getItem("user"));
+// script.js
 
-    if (user) {
-        document.getElementById("welcome-message").innerText = `Welcome back, ${user.name}!`;
-    } else {
-        window.location.href = "index.html"; // Redirect to login if no user is found
-    }
-});
+document.getElementById('loginForm').addEventListener('submit', function(e) {
+    e.preventDefault();
 
-// Logout functionality
-document.getElementById("logout-btn").addEventListener("click", function() {
-    localStorage.removeItem("user");
-    window.location.href = "index.html"; // Redirect to login
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    const rememberMe = document.getElementById('rememberMe').checked;
+
+    console.log('Email:', email);
+    console.log('Password:', password);
+    console.log('Remember Me:', rememberMe);
+
+    alert('Login functionality not yet implemented!');
 });
