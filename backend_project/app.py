@@ -1,8 +1,10 @@
 from flask import Flask, request, jsonify
 import sqlite3
 import re  # For email validation
+from flask_cors import CORS  # Import Flask-CORS
 
 app = Flask(__name__)
+CORS(app)  # Enable CORS for all routes
 
 # Function to connect to SQLite
 def get_db_connection():
