@@ -13,28 +13,30 @@
             <div class="input-section">
                 <h2>Package Input</h2>
                 <form id="package-form">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Package ID</th>
-                                <th>Weight</th>
-                                <th>Priority</th>
-                            </tr>
-                        </thead>
-                        <tbody id="package-table">
-                            <tr>
-                                <td><input type="text" name="package-id[]" placeholder="Package ID" required></td>
-                                <td><input type="number" name="weight[]" placeholder="Weight" required></td>
-                                <td>
-                                    <select name="priority[]" required>
-                                        <option value="high">High</option>
-                                        <option value="medium">Medium</option>
-                                        <option value="low">Low</option>
-                                    </select>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="scrollable-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Package ID</th>
+                                    <th>Weight</th>
+                                    <th>Priority</th>
+                                </tr>
+                            </thead>
+                            <tbody id="package-table">
+                                <tr>
+                                    <td><input type="text" name="package-id[]" placeholder="Package ID" required></td>
+                                    <td><input type="number" name="weight[]" placeholder="Weight" required></td>
+                                    <td>
+                                        <select name="priority[]" required>
+                                            <option value="high">High</option>
+                                            <option value="medium">Medium</option>
+                                            <option value="low">Low</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                     <button type="button" id="add-package">Add Another Package</button>
                     <div class="file-upload">
                         <label for="file-upload">Upload CSV/JSON</label>
@@ -45,23 +47,23 @@
             <div class="input-section">
                 <h2>Container Input</h2>
                 <form id="container-form">
-                    <div class="input-group">
-                        <label for="container-id">Container ID</label>
-                        <input type="text" id="container-id" name="container-id" placeholder="Container ID" required>
-                    </div>
-                    <div class="input-group">
-                        <label for="container-capacity">Container Capacity</label>
-                        <input type="number" id="container-capacity" name="container-capacity" placeholder="Container Capacity (kg)" required>
+                    <div class="scrollable-wrapper">
+                        <div class="input-group">
+                            <label for="container-id">Container ID</label>
+                            <input type="text" id="container-id" name="container-id" placeholder="Container ID" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="container-capacity">Container Capacity</label>
+                            <input type="number" id="container-capacity" name="container-capacity" placeholder="Container Capacity (kg)" required>
+                        </div>
                     </div>
                     <button type="button" id="add-container">Add Another Container</button>
                 </form>
             </div>
-            <div class="actions">
-                <button onclick="window.location.href='./result.html';" class="proceed-btn">Proceed</button>
+        </div>
 
-                <!-- <button type="button" id="add-package-btn">Add Another Package</button> -->
-            </div>
-            
+        <div class="actions">
+            <button onclick="window.location.href='./result.html';" class="proceed-btn">Proceed</button>
         </div>
     </div>
     <script src="../assets/scripts/input.js"></script>

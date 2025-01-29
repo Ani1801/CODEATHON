@@ -82,6 +82,7 @@ body {
 .content h1 {
   font-size: 2.5rem;
   margin-bottom: 20px;
+  
 }
 
 .content p {
@@ -90,6 +91,16 @@ body {
   margin-bottom: 20px;
 }
 
+.option{
+  padding: 15px 30px;
+  font-size: 1rem;
+  background: #ff5c5c;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
 .get-started {
   padding: 15px 30px;
   font-size: 1rem;

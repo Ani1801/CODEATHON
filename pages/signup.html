@@ -18,28 +18,30 @@
         <!-- Right Panel -->
         <div class="right-panel">
             <h2>Create Your Account</h2>
-            <!-- Update the form action to point to index.html -->
-            <form id="signup-form" action="./db.html" method="get">
+            <!-- Update the form action to point to db.html -->
+            <form id="signup-form" method="POST">
                 <div class="input-group">
                     <label for="name">Full Name</label>
                     <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    <span class="error-message"></span>
                 </div>
                 <div class="input-group">
                     <label for="email">Email Address</label>
                     <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    <span class="error-message"></span>
                 </div>
                 <div class="input-group">
                     <label for="password">Password</label>
                     <input type="password" id="password" name="password" placeholder="Create a password" required>
+                    <span class="error-message"></span>
                 </div>
                 <div class="input-group">
                     <label for="confirm-password">Confirm Password</label>
                     <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+                    <span class="error-message"></span>
                 </div>
-                <!-- Keep this button as part of the form -->
                 
-                <button onclick="window.location.href='./db.html';" class="proceed-btn">Sign up</button>
-
+                <button type="submit" class="proceed-btn">Sign Up</button>
             </form>
             <p class="signup-text">Already have an account? <a href="../index.html">Log In</a></p>
         </div>

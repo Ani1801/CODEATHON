@@ -29,7 +29,7 @@ document.getElementById('add-container').addEventListener('click', function () {
         <label for="container-capacity">Container Capacity</label>
         <input type="number" name="container-capacity[]" placeholder="Container Capacity (kg)" required>
     `;
-    containerForm.appendChild(newContainerInput);
+    containerForm.querySelector('.scrollable-wrapper').appendChild(newContainerInput);
 });
 
 // Function to handle form submission
@@ -65,49 +65,5 @@ document.getElementById('submit-btn').addEventListener('click', function (event)
     console.log("Package Data:", packageObj);
     console.log("Container Data:", containerObj);
     
-    // Add your algorithm logic here for submitting the data
-    
     alert('Data submitted successfully!');
 });
-
-// Function to validate form data before submission (optional)
-function validateForm() {
-    const packageForm = document.getElementById('package-form');
-    const containerForm = document.getElementById('container-form');
-    
-    let isValid = true;
-
-    // Check if all required fields are filled out in the package form
-    const packageInputs = packageForm.querySelectorAll('input[required], select[required]');
-    packageInputs.forEach(input => {
-        if (!input.value) {
-            isValid = false;
-            input.classList.add('error');
-        } else {
-            input.classList.remove('error');
-        }
-    });
-
-    // Check if all required fields are filled out in the container form
-    const containerInputs = containerForm.querySelectorAll('input[required]');
-    containerInputs.forEach(input => {
-        if (!input.value) {
-            isValid = false;
-            input.classList.add('error');
-        } else {
-            input.classList.remove('error');
-        }
-    });
-
-    return isValid;
-}
-
-// Optional: Add error styles for invalid fields
-const errorStyle = document.createElement('style');
-errorStyle.innerHTML = `
-    .error {
-        border: 1px solid red;
-        background-color: #fdd;
-    }
-`;
-document.head.appendChild(errorStyle);
