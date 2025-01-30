@@ -6,9 +6,9 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #333;
-  background: linear-gradient(to right, #6C63FF, #4e44d0);
+  background: linear-gradient(to right, #6c63ff, #4e44d0);
   min-height: 100vh;
 }
 
@@ -82,7 +82,6 @@ body {
 .content h1 {
   font-size: 2.5rem;
   margin-bottom: 20px;
-  
 }
 
 .content p {
@@ -91,7 +90,7 @@ body {
   margin-bottom: 20px;
 }
 
-.option{
+.option {
   padding: 15px 30px;
   font-size: 1rem;
   background: #ff5c5c;
@@ -126,4 +125,8 @@ body {
 .illustration img {
   max-width: 540px;
   height: 565px;
+}
+
+.logout {
+  background-color: rgb(219, 32, 32);
 }

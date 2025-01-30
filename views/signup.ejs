@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="/styles/signup.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Left Panel -->
+      <div class="left-panel">
+        <h1>Welcome to Your Smart Logistics</h1>
+        <p>
+          Sign up to get started with optimizing your logistics and package
+          management!
+        </p>
+        <img
+          src="/images/signup illustration.jpg"
+          alt="Sign Up Illustration"
+          class="panel-image"
+        />
+      </div>
+
+      <!-- Right Panel -->
+      <div class="right-panel">
+        <h2>Create Your Account</h2>
+        <!-- Update the form action to point to db.html -->
+        <form
+          autocomplete="off"
+          id="signup-form"
+          method="POST"
+          action="/auth/signup"
+        >
+          <div class="input-group">
+            <label for="name">Full Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your name"
+              required
+            />
+            <span class="error-message"></span>
+          </div>
+          <div class="input-group">
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
+            <span class="error-message"></span>
+          </div>
+          <div class="input-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Create a password"
+              required
+            />
+            <span class="error-message"></span>
+          </div>
+          <div class="input-group">
+            <label for="confirm-password">Confirm Password</label>
+            <input
+              type="password"
+              id="confirm-password"
+              name="confirmPassword"
+              placeholder="Confirm your password"
+              required
+            />
+            <span class="error-message"></span>
+          </div>
+
+          <button type="submit" class="proceed-btn">Sign Up</button>
+        </form>
+        <p class="signup-text">
+          Already have an account? <a href="/auth/login">Log In</a>
+        </p>
+      </div>
+    </div>
+    <script src="/scripts/signup.js"></script>
+  </body>
+</html>

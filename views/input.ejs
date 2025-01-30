@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Package and Container Input</title>
+    <link rel="stylesheet" href="/styles/input.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Package and Container Input</h1>
+      <div class="form-container">
+        <div class="input-section">
+          <h2>Package Input</h2>
+          <form id="package-form">
+            <div class="scrollable-wrapper">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Package ID</th>
+                    <th>Weight</th>
+                    <th>Priority</th>
+                  </tr>
+                </thead>
+                <tbody id="package-table">
+                  <tr>
+                    <td>
+                      <input
+                        type="text"
+                        name="package-id[]"
+                        placeholder="Package ID"
+                        required
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="number"
+                        name="weight[]"
+                        placeholder="Weight"
+                        required
+                      />
+                    </td>
+                    <td>
+                      <select name="priority[]" required>
+                        <option value="high">High</option>
+                        <option value="medium">Medium</option>
+                        <option value="low">Low</option>
+                      </select>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <button type="button" id="add-package">Add Another Package</button>
+            <div class="file-upload">
+              <label for="file-upload">Upload CSV/JSON</label>
+              <input type="file" id="file-upload" accept=".csv, .json" />
+            </div>
+          </form>
+        </div>
+        <div class="input-section">
+          <h2>Container Input</h2>
+          <form id="container-form">
+            <div class="scrollable-wrapper">
+              <div class="input-group">
+                <label for="container-id">Container ID</label>
+                <input
+                  type="text"
+                  id="container-id"
+                  name="container-id"
+                  placeholder="Container ID"
+                  required
+                />
+              </div>
+              <div class="input-group">
+                <label for="container-capacity">Container Capacity</label>
+                <input
+                  type="number"
+                  id="container-capacity"
+                  name="container-capacity"
+                  placeholder="Container Capacity (kg)"
+                  required
+                />
+              </div>
+            </div>
+            <button type="button" id="add-container">
+              Add Another Container
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button
+          onclick="window.location.href='./result.html';"
+          class="proceed-btn"
+        >
+          Proceed
+        </button>
+      </div>
+    </div>
+    <script src="/scripts/input.js"></script>
+  </body>
+</html>
